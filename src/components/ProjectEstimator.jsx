@@ -27,7 +27,7 @@ export default function ProjectEstimator() {
                             <div className="w-12 h-[2px] bg-neutral-900"></div>
                             <span className="text-neutral-900 font-display text-sm tracking-[0.5em] uppercase font-bold">Investment Framework</span>
                         </div>
-                        <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-[5.5rem] font-display font-bold text-neutral-950 uppercase tracking-tighter leading-[1.1] mb-10 lg:mb-12 break-words">
+                        <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-neutral-950 uppercase tracking-tighter leading-[1.1] mb-8 lg:mb-10 text-nowrap">
                             PROJECT <br /> <span className="opacity-40">ESTIMATOR</span>
                         </h2>
                         <p className="text-neutral-900 text-lg md:text-xl font-medium mb-12 max-w-md leading-relaxed">

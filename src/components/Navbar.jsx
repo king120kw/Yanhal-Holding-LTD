@@ -27,8 +27,8 @@ export default function Navbar() {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative z-50">
-                <a href="#home" className="flex items-center gap-4 group relative z-50">
-                    <span className="material-symbols-outlined text-[#C5A059] font-light transition-transform group-hover:rotate-12 drop-shadow-xl leading-none" style={{ fontSize: '120px' }}>
+                <a href="#home" className="flex items-center gap-2 sm:gap-4 group relative z-50">
+                    <span className="material-symbols-outlined text-[#C5A059] text-[60px] md:text-[80px] lg:text-[120px] font-light transition-transform group-hover:rotate-12 drop-shadow-xl leading-none">
                         architecture
                     </span>
                     <span className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-[0.2em] text-white drop-shadow-xl mt-4">

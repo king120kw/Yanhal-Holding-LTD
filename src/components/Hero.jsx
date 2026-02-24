@@ -1,9 +1,10 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 export default function Hero() {
     const videoRef = useRef(null);
     const isInView = useInView(videoRef, { margin: "-100px" });
+    const [isTouched, setIsTouched] = useState(false);
 
     useEffect(() => {
         if (videoRef.current) {
@@ -52,10 +53,10 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6">
-                        <button className="px-10 py-5 bg-[#C5A059] hover:bg-white text-neutral-900 font-display font-bold text-[10px] tracking-[0.4em] uppercase transition-all flex items-center justify-center gap-4 active:scale-95 group">
+                        <button className="w-full sm:w-auto px-10 py-5 bg-[#C5A059] hover:bg-white text-neutral-900 font-display font-bold text-[10px] tracking-[0.4em] uppercase transition-all flex items-center justify-center gap-4 active:scale-95 group">
                             START PROJECT <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </button>
-                        <button className="px-10 py-5 border border-white/10 hover:border-[#C5A059]/50 text-white font-display font-bold text-[10px] tracking-[0.4em] uppercase transition-all active:scale-95 bg-white/5">
+                        <button className="w-full sm:w-auto px-10 py-5 border border-white/10 hover:border-[#C5A059]/50 text-white font-display font-bold text-[10px] tracking-[0.4em] uppercase transition-all active:scale-95 bg-white/5">
                             VIEW PORTFOLIO
                         </button>
                     </div>
@@ -67,7 +68,10 @@ export default function Hero() {
                     transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     className="relative"
                 >
-                    <div className="aspect-[4/5] relative z-10 overflow-hidden border border-white/5 p-4 bg-[#141414] group">
+                    <div
+                        className="aspect-[4/5] relative z-10 overflow-hidden border border-white/5 p-4 bg-[#141414] group cursor-pointer"
+                        onClick={() => setIsTouched(!isTouched)}
+                    >
                         <div className="w-full h-full relative overflow-hidden">
                             <video
                                 ref={videoRef}
@@ -75,7 +79,10 @@ export default function Hero() {
                                 muted
                                 playsInline
                                 loop
-                                className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000"
+                                className={`w-full h-full object-cover transition-all duration-1000 ${isTouched
+                                        ? "grayscale-0 brightness-100"
+                                        : "grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100"
+                                    }`}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60 pointer-events-none" />
                         </div>

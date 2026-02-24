@@ -38,7 +38,7 @@ export default function Hero() {
                         <span className="text-[#C5A059] font-display text-[10px] tracking-[0.6em] uppercase">Premium Architecture • NY</span>
                     </div>
 
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6.5rem] font-display font-bold text-white leading-[1.1] mb-10 tracking-tighter break-words">
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.1] mb-10 tracking-tighter">
                         WE BUILD <br />
                         <span className="text-transparent" style={{ WebkitTextStroke: '2px #C5A059' }}>
                             LEGACIES

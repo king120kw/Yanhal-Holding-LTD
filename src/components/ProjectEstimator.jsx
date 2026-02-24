@@ -16,19 +16,18 @@ export default function ProjectEstimator() {
     const estimate = area * baseRates[type];
 
     return (
-        <SectionWrapper id="estimator" className="bg-[#C5A059] py-32 overflow-hidden relative">
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-                <img src="/16_estimator.webp" className="w-full h-full object-cover grayscale brightness-200" alt="Background" />
-            </div>
+        <SectionWrapper id="estimator" className="bg-[#C5A059] py-24 md:py-32 overflow-hidden relative">
+            {/* The background image /16_estimator.webp was removed here because it contains flattened UI text that was visually hallucinating and overlapping directly under the HTML text, causing confusion */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059] to-[#A88748] opacity-50 z-0"></div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                    <div>
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="w-12 h-[1.5px] bg-neutral-900"></div>
-                            <span className="text-neutral-900 font-display text-[10px] tracking-[0.5em] uppercase font-bold">Investment Framework</span>
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    <div className="max-w-2xl">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-12 h-[2px] bg-neutral-900"></div>
+                            <span className="text-neutral-900 font-display text-xs tracking-[0.5em] uppercase font-bold">Investment Framework</span>
                         </div>
-                        <h2 className="text-6xl md:text-8xl font-display font-bold text-neutral-950 uppercase tracking-tighter leading-[0.9] mb-10">
+                        <h2 className="text-6xl md:text-8xl xl:text-[7.5rem] font-display font-bold text-neutral-950 uppercase tracking-tighter leading-[1] mb-10 lg:mb-12">
                             PROJECT <br /> <span className="opacity-40">ESTIMATOR</span>
                         </h2>
                         <p className="text-neutral-900 text-lg md:text-xl font-light mb-12 max-w-md leading-relaxed">
